@@ -22,7 +22,6 @@ public class CrimesLocationService {
     @Value("${url.police.api.crimesatlocation}")
     private String crimesLocationsUrl;
 
-    @Cacheable(value = "crimeLookups")
     public CrimesLocationResponse[] getCrimesAtLocations(String date, double lat, double lng) {
 
         var uri = UriComponentsBuilder.fromHttpUrl(crimesLocationsUrl)
